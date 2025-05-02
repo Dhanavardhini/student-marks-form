@@ -1,42 +1,43 @@
 {
   "input": [
     {
-      "id": "1746169643919",
-      "mark1": "3",
-      "mark2": "3",
-      "mark3": "2",
-      "mark4": "33",
-      "mark5": "2",
-      "totalMarks": 43,
-      "percentage": "8.60",
-      "firstName": "ammu",
+      "id": "1746178600475",
+      "mark1": "100",
+      "mark2": "88",
+      "mark3": "78",
+      "mark4": "69",
+      "mark5": "60",
+      "totalMarks": 395,
+      "percentage": "79.00",
+      "firstName": "Dhanavardhini",
       "lastName": "A",
-      "email": "dhanavardhini02@gmail.com",
-      "gender": "Female",
-      "department": "ECE",
-      "college": "B.E",
+      "email": "admin@gmail.com",
+      "gender": "Other",
+      "department": "EEE",
+      "college": "Anna University",
       "subjects": [
+        "Current Semester",
         "Overall Semester"
       ]
     },
     {
-      "id": "1746169741569",
-      "mark1": "23",
-      "mark2": "2",
-      "mark3": "22",
-      "mark4": "2",
-      "mark5": "1",
-      "totalMarks": 50,
-      "percentage": "10.00",
-      "firstName": "ammu",
+      "id": "1746181222817",
+      "firstName": "siva",
+      "totalMarks": 57,
+      "percentage": "11.40",
       "lastName": "A",
-      "email": "dhanavardhini02@gmail.com",
-      "gender": "Female",
+      "email": "admin@gmail.com",
+      "gender": "Other",
       "department": "CSE",
-      "college": "jqwbdu",
+      "college": "Anna University",
       "subjects": [
         "Overall Semester"
-      ]
+      ],
+      "mark1": "12",
+      "mark2": "11",
+      "mark3": "12",
+      "mark4": "10",
+      "mark5": "12"
     }
   ]
 }

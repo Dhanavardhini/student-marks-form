@@ -53,7 +53,7 @@ const InputField = ({ field }) => {
         />
       )}
 
-      {field.type === 'number' && (
+      {/* {field.type === 'number' && (
         <input
           type="number"
           min="0"
@@ -71,7 +71,39 @@ const InputField = ({ field }) => {
           onFocus={handleFocus}
           onBlur={handleBlur}
         />
-      )}
+      )} */}
+
+{field.type === 'number' && (
+  <input
+    type="number"
+    min="0"
+    max="100"
+    {...commonProps}
+    onKeyDown={(e) => {
+      // Allow only digits and navigation keys
+      const allowedKeys = [
+        'Backspace', 'Tab', 'ArrowLeft', 'ArrowRight', 'Delete'
+      ];
+      const isNumber = /^[0-9]$/.test(e.key);
+
+      if (!isNumber && !allowedKeys.includes(e.key)) {
+        e.preventDefault();
+      }
+    }}
+    onChange={(e) => {
+      const val = parseInt(e.target.value || '0', 10);
+      if (val > 100) {
+        alert(`${field.label} cannot be more than 100`);
+        updateValue(field.name, '100');
+      } else {
+        handleChange(e);
+      }
+    }}
+    onFocus={handleFocus}
+    onBlur={handleBlur}
+  />
+)}
+
 
       {/* {field.type === 'radio' && field.options.map(opt => (
         <label key={opt} style={{ marginRight: '10px' }}>
@@ -223,44 +255,44 @@ const InputField = ({ field }) => {
       )} */}
 
 
-{field.type === 'checkbox' && (
-  <div
-    style={{
-      display: 'flex',
-      gap: '20px',
-      overflowX: 'auto',
-      flexWrap: 'nowrap',
-      whiteSpace: 'nowrap',
-      paddingBottom: '10px',
-    }}
-  >
-    {field.options.map(opt => {
-      const selectedValues = formValues[field.name] || [];
-      return (
-        <label key={opt} style={{ display: 'flex', alignItems: 'center' }}>
-          <input
-            type="checkbox"
-            name={field.name}
-            value={opt}
-            checked={selectedValues.includes(opt)}
-            onChange={(e) => {
-              const checked = e.target.checked;
-              const updatedValues = checked
-                ? [...selectedValues, opt]
-                : selectedValues.filter(item => item !== opt);
-              updateValue(field.name, updatedValues);
-            }}
-            style={{ marginRight: '10px' }}
-          />
+      {field.type === 'checkbox' && (
+        <div
+          style={{
+            display: 'flex',
+            gap: '20px',
+            overflowX: 'auto',
+            flexWrap: 'nowrap',
+            whiteSpace: 'nowrap',
+            paddingBottom: '10px',
+          }}
+        >
+          {field.options.map(opt => {
+            const selectedValues = formValues[field.name] || [];
+            return (
+              <label key={opt} style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                  type="checkbox"
+                  name={field.name}
+                  value={opt}
+                  checked={selectedValues.includes(opt)}
+                  onChange={(e) => {
+                    const checked = e.target.checked;
+                    const updatedValues = checked
+                      ? [...selectedValues, opt]
+                      : selectedValues.filter(item => item !== opt);
+                    updateValue(field.name, updatedValues);
+                  }}
+                  style={{ marginRight: '10px' }}
+                />
 
-           <div style={{ fontWeight: 'normal' }}>
-                  {opt}
-                </div>
-        </label>
-      );
-    })}
-  </div>
-)}
+                <div style={{ fontWeight: 'normal' }}>
+                        {opt}
+                      </div>
+              </label>
+            );
+          })}
+        </div>
+      )}
 
 
     </div>
