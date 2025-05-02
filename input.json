@@ -1,0 +1,42 @@
+{
+  "input": [
+    {
+      "id": "1746169643919",
+      "mark1": "3",
+      "mark2": "3",
+      "mark3": "2",
+      "mark4": "33",
+      "mark5": "2",
+      "totalMarks": 43,
+      "percentage": "8.60",
+      "firstName": "ammu",
+      "lastName": "A",
+      "email": "dhanavardhini02@gmail.com",
+      "gender": "Female",
+      "department": "ECE",
+      "college": "B.E",
+      "subjects": [
+        "Overall Semester"
+      ]
+    },
+    {
+      "id": "1746169741569",
+      "mark1": "23",
+      "mark2": "2",
+      "mark3": "22",
+      "mark4": "2",
+      "mark5": "1",
+      "totalMarks": 50,
+      "percentage": "10.00",
+      "firstName": "ammu",
+      "lastName": "A",
+      "email": "dhanavardhini02@gmail.com",
+      "gender": "Female",
+      "department": "CSE",
+      "college": "jqwbdu",
+      "subjects": [
+        "Overall Semester"
+      ]
+    }
+  ]
+}
