@@ -1,12 +1,19 @@
-# React + Vite
+# Student Marks and Percentage Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based dynamic form that collects student details including name, email, gender, department, and subjects. The form also calculates the total marks and percentage. The submitted form data is sent to a local JSON server and displayed as submission cards.
 
-Currently, two official plugins are available:
+## Features
+- Dynamic form fields for student details.
+- Checkbox, dropdown, text, and number input types.
+- Real-time calculation of total marks and percentage.
+- Submissions stored and displayed in a list below the form.
+- Form validation and reset after submission.
+- Local JSON Server to handle form submissions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React.js
+- React Context API for state management
+- CSS for styling
+- JSON Server to mock backend
+- Fetch API for submitting data
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
